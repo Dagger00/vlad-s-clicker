@@ -7,5 +7,5 @@ const server = http.createServer(function (request, response) {
 });
 
 var port = process.env.PORT;
-server.listen('3000');
+server.listen(port);
 console.log('Server started');
