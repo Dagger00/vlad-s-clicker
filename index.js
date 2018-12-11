@@ -2,7 +2,9 @@
 
 
 const sections = document.getElementsByTagName('section');
+const links = document.querySelectorAll('.menu__link');
 const sectionsArray = Array.from(sections);
+const linksArray = Array.from(links);
 
 function linkClick(event) {
   event.preventDefault();
@@ -15,7 +17,6 @@ function linkClick(event) {
   })
 }
 
-sectionsArray.forEach(function (item) {
+linksArray.forEach(function (item) {
   item.addEventListener('click', linkClick);
 });
-
