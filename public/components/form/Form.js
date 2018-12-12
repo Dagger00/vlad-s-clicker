@@ -9,11 +9,11 @@
       super(el);
     }
 
-    static Create(classname, inputs = [],) {
-      let form = Block.Create('form', [classname]);
+    static create(classname, inputs = [],) {
+      let form = Block.create('form', [classname]);
 
       inputs.forEach(function (input) {
-        form.append(Input.Create(input.name, input.type, input.placeholder, input.value).el);
+        form.append(Input.create(input.name, input.type, input.placeholder, input.value).el);
       });
       return new Form(form.el)
     }

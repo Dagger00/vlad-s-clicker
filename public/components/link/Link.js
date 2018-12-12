@@ -7,7 +7,7 @@
       super(el);
     }
 
-    static Create(href, classes = [], attributes = {}, text) {
+    static create(href, classes = [], attributes = {}, text) {
       const a = document.createElement('a');
       classes.forEach(function (item) {
         a.classList.add(item);

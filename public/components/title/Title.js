@@ -7,7 +7,7 @@
       super(el);
     }
 
-    static Create(tagName, classnames = [], text) {
+    static create(tagName, classnames = [], text) {
       let element = document.createElement(tagName);
       classnames.forEach(function (item) {
         element.classList.add(item);

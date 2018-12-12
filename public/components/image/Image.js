@@ -8,8 +8,8 @@
       super(el);
     }
     
-    static Create(className, src, alt) {
-      const img = Block.Create('img', [className], {'src': src, 'alt': alt});
+    static create(className, src, alt) {
+      const img = Block.create('img', [className], {'src': src, 'alt': alt});
       return new Image(img.el);
     }
   }

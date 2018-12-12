@@ -14,33 +14,33 @@ const menuItems = [
   'game',
   'score'
 ];
-const menuBlock = menu.Create(menuItems);
+const menuBlock = menu.create(menuItems);
 
-const loginFormBlock = form.Create('form', [
-  input.Create('login', 'text', 'Enter login', '').el,
-  input.Create('password', 'password', 'Enter password', '').el,
-  input.Create('button', 'submit', '', 'Войти').el,
+const loginFormBlock = form.create('form', [
+  input.create('login', 'text', 'Enter login', '').el,
+  input.create('password', 'password', 'Enter password', '').el,
+  input.create('button', 'submit', '', 'Войти').el,
 ]);
-const signUpFormBlock = form.Create('form', [
-  input.Create('login', 'text', 'Enter login', '').el,
-  input.Create('password', 'password', 'Enter password', '').el,
-  input.Create('password', 'password', 'Re-enter password', '').el,
-  input.Create('button', 'submit', '', 'Зарегистрироваться').el,
+const signUpFormBlock = form.create('form', [
+  input.create('login', 'text', 'Enter login', '').el,
+  input.create('password', 'password', 'Enter password', '').el,
+  input.create('password', 'password', 'Re-enter password', '').el,
+  input.create('button', 'submit', '', 'Зарегистрироваться').el,
 ]);
 
-const gameBlock = Block.Create('div', ['game__container']);
-const gameImg = Image.Create('game__persona', 'img/vlad.png', 'Vlad');
-const gameCounter = title.Create('span', ['game__counter'], '0');
+const gameBlock = Block.create('div', ['game__container']);
+const gameImg = Image.create('game__persona', 'img/vlad.png', 'Vlad');
+const gameCounter = title.create('span', ['game__counter'], '0');
 gameBlock.append(gameImg.el);
 gameBlock.append(gameCounter.el);
 
-const scoreBlock = Block.Create('div', ['score__container']);
+const scoreBlock = Block.create('div', ['score__container']);
 
-const menuSection = section.Create('menu', 'h1', 'Menu', menuBlock.el);
-const loginSection = section.Create('login', 'h1', 'Login', loginFormBlock.el);
-const regSection = section.Create('reg', 'h1', 'Sign-Up', signUpFormBlock.el);
-const gameSection = section.Create('game', 'h1', 'Hello Game', gameBlock.el);
-const scoreSection = section.Create('score', 'h1', 'Hello Score', scoreBlock.el);
+const menuSection = section.create('menu', 'h1', 'Menu', menuBlock.el);
+const loginSection = section.create('login', 'h1', 'Login', loginFormBlock.el);
+const regSection = section.create('reg', 'h1', 'Sign-Up', signUpFormBlock.el);
+const gameSection = section.create('game', 'h1', 'Hello Game', gameBlock.el);
+const scoreSection = section.create('score', 'h1', 'Hello Score', scoreBlock.el);
 
 document.getElementById('app').appendChild(menuSection.el);
 document.getElementById('app').appendChild(loginSection.el);

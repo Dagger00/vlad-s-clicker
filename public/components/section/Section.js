@@ -10,11 +10,11 @@
       super(el);
     }
 
-    static Create(className, titleTag, title, innerElem) {
-      const section = Block.Create('section', [className]);
-      const titleElement = Title.Create(titleTag, [className], title);
+    static create(className, titleTag, title, innerElem) {
+      const section = Block.create('section', [className]);
+      const titleElement = Title.create(titleTag, [className], title);
       if (className !== 'menu') {
-        const link = Link.Create('menu', ['menu__link'], {'data-link': 'menu'}, 'Меню');
+        const link = Link.create('menu', ['menu__link'], {'data-link': 'menu'}, 'Меню');
         section.append(link.el);
         section.el.hidden = true;
       }

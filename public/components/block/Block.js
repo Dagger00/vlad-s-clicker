@@ -7,7 +7,7 @@
         this.el = el;
       }
 
-      static Create(tagName = 'div', classes = [], attributes = {}) {
+      static create(tagName = 'div', classes = [], attributes = {}) {
         const el = document.createElement(tagName);
         classes.forEach(function (item) {
           el.classList.add(item);
