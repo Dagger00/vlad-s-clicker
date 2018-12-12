@@ -1,4 +1,10 @@
 [hidden] { display: none !important }
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 #app {
   margin: 0;
   padding: 0;
@@ -68,7 +74,12 @@ form {
   align-items: center;
 }
 
+.game__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .game__persona {
   height: 500px;
-
 }

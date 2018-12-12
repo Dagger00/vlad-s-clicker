@@ -7,56 +7,14 @@
   <style></style>
 </head>
 <body class="app" id="app">
-<section class="menu">
-  <h1 class="menu__title">Меню</h1>
-  <ul class="menu__item-list">
-    <li class="menu__item"><a href="/login" class="menu__link" data-link="login">Login</a></li>
-    <li class="menu__item"><a href="/reg" class="menu__link" data-link="reg">Registration</a></li>
-    <li class="menu__item"><a href="/game" class="menu__link" data-link="game">Game</a></li>
-    <li class="menu__item"><a href="/score" class="menu__link" data-link="score">Scoreboard</a></li>
-  </ul>
-</section>
-<section class="login" hidden>
-  <a href="/menu" class="menu__link" data-link="menu">Menu</a>
-  <div class="login__block">
-    <form action="/login" class="login__form">
-      <label>
-        <input name="login" class="login__input" placeholder="Login">
-      </label>
-      <label>
-        <input name="password" class="login__input" placeholder="Password">
-      </label>
-      <input type="submit" class="login__input" value="Login">
-    </form>
-  </div>
-</section>
-<section class="reg" hidden>
-  <a href="/menu" class="menu__link" data-link="menu">Menu</a>
-  <div class="reg__block">
-    <form action="/reg" class="reg__form">
-      <label>
-        <input name="login" class="reg__input" placeholder="Login">
-      </label>
-      <label>
-        <input name="password" class="reg__input" placeholder="Password">
-      </label>
-      <label>
-        <input name="password" class="reg__input" placeholder="Re-enter password">
-      </label>
-      <input type="submit" class="reg__input" value="Register">
-    </form>
-  </div>
-</section>
-<section class="game" hidden>
-  <a href="/menu" class="menu__link" data-link="menu">Menu</a>
-  <h1 class="game__title">Hello Game</h1>
-  <img class="game__persona" id="game__persona" src="img/vlad.png" alt="Vlad">
-  <span class="game__counter" id="game__counter">0</span>
-</section>
-<section class="score" hidden>
-  <a href="/menu" class="menu__link" data-link="menu">Menu</a>
-  <h1>Hello Scoreboard</h1>
-</section>
+<script src="components/block/Block.js"></script>
+<script src="components/link/Link.js"></script>
+<script src="components/image/Image.js"></script>
+<script src="components/menu/Menu.js"></script>
+<script src="components/title/Title.js"></script>
+<script src="components/input/Input.js"></script>
+<script src="components/form/Form.js"></script>
+<script src="components/section/Section.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
