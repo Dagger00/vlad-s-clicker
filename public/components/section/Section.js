@@ -11,7 +11,7 @@
     }
 
     static create(className, titleTag, title, innerElem) {
-      const section = Block.create('section', [className]);
+      const section = Block.create('section', [className, 'section']);
       const titleElement = Title.create(titleTag, [className], title);
       if (className !== 'menu') {
         const link = Link.create('menu', ['menu__link'], {'data-link': 'menu'}, 'Меню');
