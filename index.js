@@ -1,6 +1,7 @@
 'use-strict'
 
 
+const persona = document.getElementById('game__persona');
 const sections = document.getElementsByTagName('section');
 const links = document.querySelectorAll('.menu__link');
 const sectionsArray = Array.from(sections);
@@ -19,4 +20,10 @@ function linkClick(event) {
 
 linksArray.forEach(function (item) {
   item.addEventListener('click', linkClick);
+});
+
+persona.addEventListener('click', function (event) {
+  let counter = document.getElementById('game__counter');
+  let textContent = counter.textContent;
+  counter.textContent = parseInt(textContent) + 1;
 });
