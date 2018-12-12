@@ -1,11 +1,17 @@
 const http = require('http');
 const fs = require('fs');
+const staticNode = require('node-static');
+
+const file = new staticNode.Server('./public');
+const port = process.env.PORT;
+const PORT = port === undefined ? 8000 : port;
 
 const server = http.createServer(function (request, response) {
-  var html = fs.readFileSync('index.html', 'utf-8');
-  response.end(html);
+  request.addListener('end', function () {
+    file.serve(request, response);
+  }).resume();
 });
 
-var port = process.env.PORT;
-server.listen(port);
-console.log('Server started');
+
+server.listen(PORT);
+console.log('Server started at port:', PORT);

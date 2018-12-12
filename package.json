@@ -8,5 +8,8 @@
     "start": "node server.js"
   },
   "author": "Vasiliy Khaninev",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-static": "^0.7.11"
+  }
 }
