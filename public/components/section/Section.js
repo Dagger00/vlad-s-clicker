@@ -16,7 +16,7 @@
       if (className !== 'menu') {
         const link = Link.create('menu', ['menu__link'], {'data-link': 'menu'}, 'Меню');
         section.append(link.el);
-        section.el.hidden = true;
+        section.el.style.display = 'none';
       }
       section.append(titleElement.el);
       section.append(innerElem);

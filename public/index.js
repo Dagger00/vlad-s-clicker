@@ -12,7 +12,7 @@ function linkClick(event) {
     if (link === undefined) {
       return;
     }
-    item.hidden = !item.classList.contains(link);
+    item.style.display = !item.classList.contains(link) ? 'none': 'flex';
   })
 }
 
