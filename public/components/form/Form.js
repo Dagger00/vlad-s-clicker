@@ -13,7 +13,7 @@
       let form = Block.Create('form', [classname]);
 
       inputs.forEach(function (input) {
-        form.append(Input.Create(input.className, input.name, input.type, input.placeholder, input.value).el);
+        form.append(Input.Create(input.name, input.type, input.placeholder, input.value).el);
       });
       return new Form(form.el)
     }

@@ -6,6 +6,7 @@ const menu = window.Menu;
 const form = window.Form;
 const image = window.Image;
 const title = window.Title;
+const input = window.Input;
 
 const menuItems = [
   'login',
@@ -15,16 +16,16 @@ const menuItems = [
 ];
 const menuBlock = menu.Create(menuItems);
 
-const loginFormBlock = form.Create('login__form', [
-  {'className': 'login__input', 'name': 'login', 'type': 'text', placeholder: 'Enter login', value: ''},
-  {'className': 'login__input', 'name': 'password', 'type': 'password', placeholder: 'Enter password', value: ''},
-  {'className': 'login__input', 'name': 'button', 'type': 'submit', placeholder: '', value: 'Войти'},
+const loginFormBlock = form.Create('form', [
+  input.Create('login', 'text', 'Enter login', '').el,
+  input.Create('password', 'password', 'Enter password', '').el,
+  input.Create('button', 'submit', '', 'Войти').el,
 ]);
-const signUpFormBlock = form.Create('login__form', [
-  {'className': 'reg__input', 'name': 'login', 'type': 'text', placeholder: 'Enter login', value: ''},
-  {'className': 'reg__input', 'name': 'password', 'type': 'password', placeholder: 'Enter password', value: ''},
-  {'className': 'reg__input', 'name': 'password', 'type': 'password', placeholder: 'Re-enter password', value: ''},
-  {'className': 'reg__input', 'name': 'button', 'type': 'submit', placeholder: '', value: 'Зарегистрироваться'},
+const signUpFormBlock = form.Create('form', [
+  input.Create('login', 'text', 'Enter login', '').el,
+  input.Create('password', 'password', 'Enter password', '').el,
+  input.Create('password', 'password', 'Re-enter password', '').el,
+  input.Create('button', 'submit', '', 'Зарегистрироваться').el,
 ]);
 
 const gameBlock = Block.Create('div', ['game__container']);

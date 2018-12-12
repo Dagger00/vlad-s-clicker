@@ -7,11 +7,10 @@
       super(el);
     }
 
-    static Create(className, name, type, placeholder, value) {
-      let input = Block.Create('input', [className], {'name': name, 'type': type, 'placeholder': placeholder, 'value': value});
+    static Create(name, type, placeholder, value) {
+      let input = Block.Create('input', [type === 'submit' ? 'form__button' : 'form__input'], {'name': name, 'type': type, 'placeholder': placeholder, 'value': value});
       return new Input(input.el);
     }
-
   }
 
   window.Input = Input;
