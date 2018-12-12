@@ -1,10 +1,5 @@
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 #app {
-  margin: 0;
+margin: 0;
   padding: 0;
   color: #ffffff;
   background-color: #8d6e63;
@@ -13,71 +8,4 @@ section {
   flex-direction: column;
   align-items: center;
   user-select: none;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menu__title {
-  margin: 0;
-  padding: 0;
-}
-
-.menu__item-list {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 201px;
-}
-
-.menu__item {
-  padding: 0;
-  width: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu__link {
-  user-select: none;
-  margin-top: 20px;
-  width: 200px;
-  text-align: center;
-  padding: 0;
-  text-decoration: none;
-  color: #ffffff;
-  border: 3px solid #ffffff;
-}
-
-.menu__link:hover {
-  background-color: #5f4339;
-}
-
-
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.game {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.game__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.game__persona {
-  height: 500px;
 }

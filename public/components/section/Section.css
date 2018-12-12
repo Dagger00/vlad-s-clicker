@@ -1,0 +1,21 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game__persona {
+  height: 500px;
+}
