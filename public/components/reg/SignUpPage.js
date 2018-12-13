@@ -35,7 +35,13 @@
         };
         authService.signUp(JSON.stringify(array), function (data) {
           const responseData = JSON.parse(data);
-          alert('Поздравляю, ты зареган. Логин: ' + responseData.login + '  Имя: ' + responseData.name);
+          if (responseData.err) {
+            alert('Хуйня братка');
+          } else {
+            alert('Поздравляю, ты зареган. Логин: ' + responseData.login + '  Имя: ' + responseData.name);
+            document.querySelector('.menu__link[data-link=login]').style.display = 'none';
+            document.querySelector('.menu__link[data-link=reg]').style.display = 'none';
+          }
         });
       }.bind(this));
     }
