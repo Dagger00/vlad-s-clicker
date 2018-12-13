@@ -4,3 +4,31 @@
   justify-content: center;
   align-items: center;
 }
+
+.form__input {
+  height: 40px;
+  width: 250px;
+  background-color: white;
+  color: #000000;
+  border: none;
+  box-shadow: none;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.form__button {
+  cursor: pointer;
+  height: 40px;
+  width: 250px;
+  background-color: #bd9b8f;
+  color: #000000;
+  border: none;
+  box-shadow: none;
+  font-size: 22px;
+  margin-top: 10px;
+}
+.form__button:hover {
+  background-color: #5e4238;
+  color: #ffffff;
+
+}

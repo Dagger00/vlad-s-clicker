@@ -1,9 +1,14 @@
 'use-strict'
 
 const sections = window.Sections;
-const persona = document.getElementsByClassName('game__persona')[0];
+
+
 const links = document.querySelectorAll('.menu__link');
 const linksArray = Array.from(links);
+
+linksArray.forEach(function (item) {
+  item.addEventListener('click', linkClick);
+});
 
 function linkClick(event) {
   event.preventDefault();
@@ -16,12 +21,3 @@ function linkClick(event) {
   })
 }
 
-linksArray.forEach(function (item) {
-  item.addEventListener('click', linkClick);
-});
-
-persona.addEventListener('click', function (event) {
-  let counter = document.getElementsByClassName('game__counter')[0];
-  let textContent = counter.textContent;
-  counter.textContent = parseInt(textContent, 10) + 1;
-});

@@ -10,6 +10,10 @@
   "author": "Vasiliy Khaninev",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "latest",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.4",
+    "jsonwebtoken": "latest",
     "node-static": "^0.7.11"
   }
 }

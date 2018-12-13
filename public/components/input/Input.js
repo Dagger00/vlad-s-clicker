@@ -4,7 +4,14 @@
 
   class Input extends Block {
     static create(name, type, placeholder, value) {
-      let input = Block.create('input', [type === 'submit' ? 'form__button' : 'form__input'], {'name': name, 'type': type, 'placeholder': placeholder, 'value': value});
+      let input = Block.create('input',
+        [type === 'submit' ? 'form__button' : 'form__input'],
+        {'name': name,
+          'type': type,
+          'placeholder': placeholder,
+          'value': value,
+          'required': type !== 'submit' ? 'required':''
+        });
       return new Input(input.el);
     }
   }
