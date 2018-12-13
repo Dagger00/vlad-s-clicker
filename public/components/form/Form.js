@@ -5,15 +5,12 @@
   const Input = window.Input;
 
   class Form extends Block {
-    constructor(el) {
-      super(el);
-    }
-
     static create(classname, inputs = [],) {
       let form = Block.create('form', [classname]);
 
       inputs.forEach(function (input) {
-        form.append(Input.create(input.name, input.type, input.placeholder, input.value).el);
+        const inp = input.el;
+        form.append(Input.create(inp.name, inp.type, inp.placeholder, inp.value).el);
       });
       return new Form(form.el)
     }

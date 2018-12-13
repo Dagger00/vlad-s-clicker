@@ -3,10 +3,6 @@
   const Block = window.Block;
 
   class Link extends Block{
-    constructor(el) {
-      super(el);
-    }
-
     static create(href, classes = [], attributes = {}, text) {
       const a = document.createElement('a');
       classes.forEach(function (item) {

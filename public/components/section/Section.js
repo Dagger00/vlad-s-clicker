@@ -6,10 +6,6 @@
   const Link = window.Link;
 
   class Section extends Block {
-    constructor(el) {
-      super(el);
-    }
-
     static create(className, titleTag, title, innerElem) {
       const section = Block.create('section', [className, 'section']);
       const titleElement = Title.create(titleTag, [className], title);

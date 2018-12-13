@@ -3,11 +3,7 @@
   const Block = window.Block;
   const Link = window.Link;
 
-  class Menu extends Block {
-    constructor(el) {
-      super(el)
-    }
-
+  class Nav extends Block {
     static create(elements = [], attributes = {}) {
       const list = Block.create('ul', ['menu__item-list'], attributes);
       elements.forEach(function (item) {
@@ -17,9 +13,9 @@
         list.append(listItem.el);
       });
 
-      return new Menu(list.el);
+      return new Nav(list.el);
     }
   }
 
-  window.Menu = Menu;
+  window.Nav = Nav;
 })();
