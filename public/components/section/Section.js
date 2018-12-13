@@ -8,9 +8,9 @@
   class Section extends Block {
     static create(className, titleTag, title, innerElem) {
       const section = Block.create('section', [className, 'section']);
-      const titleElement = Title.create(titleTag, [className], title);
+      const titleElement = Title.create(titleTag, ['title'], title);
       if (className !== 'menu') {
-        const link = Link.create('menu', ['menu__link'], {'data-link': 'menu'}, 'Меню');
+        const link = Link.create('menu', ['link'], {'data-link': 'menu'}, 'Меню');
         section.append(link.el);
         section.el.style.display = 'none';
       }

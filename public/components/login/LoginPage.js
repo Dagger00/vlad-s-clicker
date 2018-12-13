@@ -33,8 +33,8 @@
             alert('Хуйня братка');
           } else {
             alert('Залогинен! Молодцом, начинай играть!');
-            document.querySelector('.menu__link[data-link=login]').style.display = 'none';
-            document.querySelector('.menu__link[data-link=reg]').style.display = 'none';
+            document.querySelector('.link[data-link=login]').style.display = 'none';
+            document.querySelector('.link[data-link=reg]').style.display = 'none';
           }
         });
       }.bind(this));

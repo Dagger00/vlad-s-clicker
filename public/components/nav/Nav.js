@@ -5,10 +5,10 @@
 
   class Nav extends Block {
     static create(elements = [], attributes = {}) {
-      const list = Block.create('ul', ['menu__item-list'], attributes);
+      const list = Block.create('ul', ['nav'], attributes);
       elements.forEach(function (item) {
-        let listItem = Block.create('li', ['menu__item']);
-        let link = Link.create(item, ['menu__link'], {'data-link': item}, item);
+        let listItem = Block.create('li', ['nav__item']);
+        let link = Link.create(item, ['link'], {'data-link': item}, item);
         listItem.append(link.el);
         list.append(listItem.el);
       });

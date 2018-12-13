@@ -39,8 +39,8 @@
             alert('Хуйня братка');
           } else {
             alert('Поздравляю, ты зареган. Логин: ' + responseData.login + '  Имя: ' + responseData.name);
-            document.querySelector('.menu__link[data-link=login]').style.display = 'none';
-            document.querySelector('.menu__link[data-link=reg]').style.display = 'none';
+            document.querySelector('.link[data-link=login]').style.display = 'none';
+            document.querySelector('.link[data-link=reg]').style.display = 'none';
           }
         });
       }.bind(this));
