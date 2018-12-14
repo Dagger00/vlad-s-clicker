@@ -39,8 +39,16 @@
             alert('Хуйня братка');
           } else {
             alert('Поздравляю, ты зареган. Логин: ' + responseData.login + '  Имя: ' + responseData.name);
-            document.querySelector('.link[data-link=login]').style.display = 'none';
-            document.querySelector('.link[data-link=reg]').style.display = 'none';
+            document.querySelector('.link[data-link=section_login]').style.display = 'none';
+            document.querySelector('.link[data-link=section_reg]').style.display = 'none';
+            const sections = document.querySelectorAll('section');
+            Array.from(sections).forEach(function (item) {
+              if (item.classList.contains('section_menu')) {
+                item.style.display = 'flex';
+              } else {
+                item.style.display = 'none';
+              }
+            })
           }
         });
       }.bind(this));

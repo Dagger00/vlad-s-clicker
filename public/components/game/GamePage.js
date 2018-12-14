@@ -29,7 +29,7 @@
           if (responseData.err) {
             alert(responseData.err);
           } else {
-            document.querySelector('.game h1').textContent = 'Пока! ' + responseData.name;
+            document.querySelector('.section_game h1').textContent = 'Пока! ' + responseData.name;
             const links = document.querySelectorAll('.nav .link');
             Array.from(links).forEach(function (item) {
               item.style.display = 'block';
@@ -46,7 +46,7 @@
           if (responseData.err) {
             alert('Не гражданин! Залогинься');
           } else {
-            document.querySelector('.game h1').textContent = 'Привет ' + responseData.name;
+            document.querySelector('.section_game h1').textContent = 'Привет ' + responseData.name;
           }
         });
         const counter = document.getElementsByClassName('game__counter')[0];
