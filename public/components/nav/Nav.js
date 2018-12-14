@@ -8,7 +8,7 @@
       const list = Block.create('ul', ['nav'], attributes);
       elements.forEach(function (item) {
         let listItem = Block.create('li', ['nav__item']);
-        let link = Link.create(item, ['link'], {'data-link': item}, item);
+        let link = Link.create(item, ['link'], {'data-link': 'section_' + item}, item);
         listItem.append(link.el);
         list.append(listItem.el);
       });

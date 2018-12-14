@@ -12,6 +12,6 @@
 
   const menuBlock = nav.create(menuItems);
 
-  window.MenuPage = section.create('menu', 'h1', 'Menu', menuBlock.el);
+  window.MenuPage = section.create(['section', 'section_menu'], 'h1', 'Menu', menuBlock.el);
 
 })();

@@ -19,7 +19,7 @@
 
       const signUpFormBlock = form.create('form', elements);
 
-      return new SignUpPage(section.create('reg', 'h1', 'Sign-Up', signUpFormBlock.el).el);
+      return new SignUpPage(section.create(['section', 'section_reg'], 'h1', 'Sign-Up', signUpFormBlock.el).el);
     }
 
     initEventListeners() {

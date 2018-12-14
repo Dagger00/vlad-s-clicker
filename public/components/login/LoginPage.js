@@ -15,7 +15,7 @@
         input.create('button', 'submit', '', 'Войти'),
       ];
       const loginFormBlock = form.create('form', elements);
-      return new LoginPage(section.create('login', 'h1', 'Login', loginFormBlock.el).el);
+      return new LoginPage(section.create(['section', 'section_login'], 'h1', 'Login', loginFormBlock.el).el);
     }
 
     initEventListeners() {

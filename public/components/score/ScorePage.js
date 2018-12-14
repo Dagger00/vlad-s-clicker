@@ -6,5 +6,5 @@
 
   const scoreBlock = block.create('div', ['score__container']);
 
-  window.ScorePage = section.create('score', 'h1', 'Hello Score', scoreBlock.el);
+  window.ScorePage = section.create(['section', 'section_score'], 'h1', 'Hello Score', scoreBlock.el);
 })();

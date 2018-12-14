@@ -18,7 +18,7 @@
       gameBlock.append(gameExit.el);
       gameBlock.append(gameImg.el);
       gameBlock.append(gameCounter.el);
-      return new GamePage(section.create('game', 'h1', 'Hello Game', gameBlock.el).el);
+      return new GamePage(section.create(['section', 'section_game'], 'h1', 'Hello Game', gameBlock.el).el);
     }
 
     initEventListeners() {

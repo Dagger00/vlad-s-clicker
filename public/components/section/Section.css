@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.game {
+.section_game {
   display: flex;
   flex-direction: column;
   align-items: center;
