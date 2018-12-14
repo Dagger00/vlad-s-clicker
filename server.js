@@ -53,6 +53,28 @@ app.post('/login', (req, resp) => {
     })
   }
 });
+app.delete('/login', (req, resp) => {
+  const cookie = req.cookies.jwt;
+  if (cookie) {
+    jwt.verify(cookie, 'kek', function (err, decoded) {
+      if (err) {
+        resp.statusCode = 400;
+        resp.json({
+          err: 'Ты хацкер!'
+        })
+      } else {
+        resp.cookie('jwt', 'kek', {httpOnly: true, maxAge: 0});
+        resp.statusCode = 200;
+        resp.json({name: decoded.name})
+      }
+    });
+  } else {
+    resp.statusCode = 401;
+    resp.json({
+      err: 'Ты и так не гражданин!'
+    });
+  }
+});
 app.post('/reg', (req, resp) => {
   if (req.body.login !== users[0].name && req.body.pwd === req.body.pwd2) {
     const newUser = {
@@ -84,7 +106,6 @@ app.post('/reg', (req, resp) => {
 });
 app.get('/game', (req, resp) => {
   const cookie = req.cookies.jwt;
-
   if (cookie) {
     jwt.verify(cookie, 'kek', function (err, decoded) {
       if (err) {
