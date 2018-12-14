@@ -22,7 +22,7 @@
       this.el.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const inputs = document.querySelectorAll('.login .form__input');
+        const inputs = document.querySelectorAll('.section_login .form__input');
         const array = {
           login: inputs[0].value,
           pwd: inputs[1].value

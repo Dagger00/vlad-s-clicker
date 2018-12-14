@@ -26,7 +26,7 @@
       this.el.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const inputs = document.querySelectorAll('.reg .form__input');
+        const inputs = document.querySelectorAll('.section_reg .form__input');
         const array = {
           login: inputs[0].value,
           name: inputs[1].value,
