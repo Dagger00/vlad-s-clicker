@@ -104,7 +104,7 @@ app.post('/reg', (req, resp) => {
     })
   }
 });
-app.get('/game', (req, resp) => {
+app.get('/check-auth', (req, resp) => {
   const cookie = req.cookies.jwt;
   if (cookie) {
     jwt.verify(cookie, 'kek', function (err, decoded) {

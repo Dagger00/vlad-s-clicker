@@ -2,7 +2,6 @@
 
 const sections = window.Sections;
 
-
 const links = document.querySelectorAll('.link');
 const linksArray = Array.from(links);
 

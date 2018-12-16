@@ -9,6 +9,20 @@
 
   const sections = [menu.el, login.el, reg.el, game.el, score.el];
   document.getElementById('app').appendChild(menu.el);
+
+  const authService = window.AuthService;
+  authService.checkAuth(function (data) {
+    const responseData = JSON.parse(data);
+    if (!responseData.err) {
+      const links = document.querySelectorAll('.link');
+      Array.from(links).forEach(function (item) {
+        if (item.getAttribute('data-link') === 'section_login' || item.getAttribute('data-link') === ('section_reg')) {
+          item.style.display = 'none';
+        }
+      })
+    }
+  });
+
   document.getElementById('app').appendChild(login.el);
   document.getElementById('app').appendChild(reg.el);
   document.getElementById('app').appendChild(game.el);

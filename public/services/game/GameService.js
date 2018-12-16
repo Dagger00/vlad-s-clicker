@@ -5,7 +5,7 @@
 
   class GameService {
     static getKek(callback) {
-      return http.get('game', callback);
+      return http.get('check-auth', callback);
     }
   }
 

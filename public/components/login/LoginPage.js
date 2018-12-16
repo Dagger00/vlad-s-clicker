@@ -30,12 +30,10 @@
         authService.login(JSON.stringify(array), function (data) {
           const responseData = JSON.parse(data);
           if (responseData.err) {
-            alert('Хуйня братка');
+            alert(responseData.err);
           } else {
-            alert('Залогинен! Молодцом, начинай играть!');
             document.querySelector('.link[data-link=section_login]').style.display = 'none';
             document.querySelector('.link[data-link=section_reg]').style.display = 'none';
-
             const sections = document.querySelectorAll('section');
             Array.from(sections).forEach(function (item) {
               if (item.classList.contains('section_menu')) {

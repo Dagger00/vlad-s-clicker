@@ -36,7 +36,7 @@
         authService.signUp(JSON.stringify(array), function (data) {
           const responseData = JSON.parse(data);
           if (responseData.err) {
-            alert('Хуйня братка');
+            alert(responseData.err);
           } else {
             alert('Поздравляю, ты зареган. Логин: ' + responseData.login + '  Имя: ' + responseData.name);
             document.querySelector('.link[data-link=section_login]').style.display = 'none';

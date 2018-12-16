@@ -36,7 +36,6 @@
             })
           }
         });
-
       });
 
       const persona = document.getElementsByClassName('game__persona')[0];

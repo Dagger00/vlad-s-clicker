@@ -13,6 +13,9 @@
     static signUp(data, callback) {
       return http.post('reg', data, callback);
     }
+    static checkAuth(callback) {
+      return http.get('check-auth', callback);
+    }
   }
 
   window.AuthService = AuthService;
